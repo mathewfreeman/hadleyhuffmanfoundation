@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+    <title>Hadley Huffman Foundation | Welcome</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#F7FAF8',
+                            100: '#EBF2ED',
+                            200: '#D6E3D8',
+                            300: '#B9CEBE',
+                            400: '#99B6A1',
+                            500: '#7D9D86',
+                            600: '#618069',
+                            700: '#4D6654',
+                            800: '#3D5243',
+                            900: '#304034',
+                        },
+                        brand: {
+                            green: '#648460',
+                            copper: '#A67448'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-up {
+            animation: fadeUpAnim 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        @keyframes fadeUpAnim {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 150ms; }
+        .delay-200 { animation-delay: 300ms; }
+        .delay-300 { animation-delay: 450ms; }
+        
+        .input-sharp {
+            border: 1px solid theme('colors.sage.200');
+            background: transparent;
+            border-radius: 0;
+            padding: 1rem 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .input-sharp:focus {
+            outline: none;
+            border-color: theme('colors.brand.green');
+            box-shadow: 0 0 0 1px theme('colors.brand.green');
+        }
+    </style>
+</head>
+<body class="bg-sage-50 text-sage-800 font-sans antialiased min-h-screen flex flex-col selection:bg-sage-300 selection:text-sage-900">
+
+    <!-- Header / Logo -->
+    <header class="w-full pt-12 pb-8 flex justify-center fade-up z-10 relative">
+        <a href="#" class="font-serif text-3xl sm:text-4xl font-medium text-brand-green tracking-tight flex flex-col items-center leading-none hover:opacity-80 transition-opacity">
+            <span>Hadley Huffman</span>
+            <span class="text-[0.65rem] sm:text-xs font-sans tracking-[0.25em] uppercase text-brand-copper mt-1.5 ml-1">Foundation</span>
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center w-full px-6 pb-24">
+        
+        <!-- Hero Image Placeholder -->
+        <div class="w-full max-w-4xl mx-auto mb-16 lg:mb-20 fade-up delay-100 relative group bg-white border border-sage-200 flex items-center justify-center overflow-hidden aspect-[4/3] sm:aspect-[21/9] shadow-sm">
+            
+            <!-- Fallback UI (Visible until actual hero image loads) -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-sage-400 z-0 bg-sage-50/50 p-6 text-center transition-opacity duration-500" id="image-fallback">
+                <svg class="w-8 h-8 mb-4 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="font-sans text-[0.65rem] sm:text-xs tracking-widest uppercase text-sage-500">Hero Image Placement</span>
+            </div>
+
+            <!-- Actual Image Tag - Add the source here (e.g., src="images/human.png") -->
+            <img src="images/human.png" alt="Healthcare is a human right." class="w-full h-auto object-contain relative z-10 opacity-0 transition-opacity duration-700" 
+                 onerror="this.style.display='none'" 
+                 onload="this.style.opacity='1'; document.getElementById('image-fallback').style.opacity='0';">
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="max-w-3xl mx-auto text-center fade-up delay-200 px-4">
+            <span class="text-brand-copper text-xs font-sans uppercase tracking-[0.2em] mb-4 block font-medium">Welcome</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-sage-900 mb-6 leading-tight">
+                A special welcome to guests of the <br class="hidden sm:block"/> <span class="italic text-brand-green">Zeke Berry Foundation.</span>
+            </h1>
+            <p class="text-lg lg:text-xl text-sage-700 font-light leading-relaxed mb-16 max-w-2xl mx-auto">
+                We are dedicated to eliminating systemic discrimination in the medical community. While we are currently building our digital home, our mission has already begun. Thank you for your incredible support today.
+            </p>
+        </div>
+
+        <!-- Contact & Email Capture Card -->
+        <div class="w-full max-w-xl mx-auto bg-white p-8 sm:p-12 border border-sage-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-center fade-up delay-300 relative overflow-hidden">
+            
+            <!-- Decorative Top Border -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-brand-green"></div>
+
+            <h2 class="font-serif text-2xl text-sage-900 mb-3">Keep in touch</h2>
+            <p class="text-sm text-sage-600 font-light mb-8 max-w-sm mx-auto leading-relaxed">
+                Leave your email to receive updates on our official launch, our research, and how you can get involved in our mission.
+            </p>
+
+            <!-- Form -->
+            <form id="notifyForm" class="space-y-4 mb-10">
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="Enter your email address" 
+                        class="w-full input-sharp text-sage-900 font-light text-center placeholder:text-sage-400"
+                    >
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-sage-800 hover:bg-sage-900 text-sage-50 px-8 py-4 uppercase tracking-[0.15em] font-medium transition-colors duration-300 text-sm border border-transparent flex justify-center items-center group"
+                >
+                    Notify Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform duration-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="successMessage" class="hidden mb-10 p-4 border border-brand-green bg-sage-50 text-brand-green font-sans text-sm tracking-wide">
+                Thank you. We've received your email and will be in touch.
+            </div>
+
+            <!-- Direct Email Alternative -->
+            <div class="pt-8 border-t border-sage-100">
+                <span class="block text-[0.65rem] font-sans uppercase tracking-[0.2em] text-sage-500 mb-3">Or reach us directly</span>
+                <a href="mailto:hello@hadleyhuffmanfoundation.org" class="font-serif italic text-lg sm:text-xl text-brand-green hover:text-sage-900 transition-colors duration-300">
+                    hello@hadleyhuffmanfoundation.org
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-sage-900 text-sage-300 py-16 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
+            
+            <a href="#" class="font-serif text-2xl font-medium text-white tracking-tight flex flex-col items-center leading-none mb-2 hover:opacity-80 transition-opacity">
+                <span>Hadley Huffman</span>
+                <span class="text-[0.65rem] font-sans tracking-[0.25em] uppercase text-brand-copper mt-1.5 ml-1">Foundation</span>
+            </a>
+            
+            <p class="text-sm font-light mb-12 text-sage-400">For Inclusion And Equality.<br>Ann Arbor, MI</p>
+            
+            <div class="border-t border-sage-800 w-full pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs tracking-wide text-sage-500 font-light">
+                <p>© 2026 The Hadley Huffman Foundation</p>
+                <div class="flex space-x-4">
+                    <span class="hidden md:inline">|</span>
+                    <span>EIN 87-2289250</span>
+                    <span class="hidden md:inline">|</span>
+                    <span>Dedicated to equity in healthcare.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Form -->
+    <script>
+        // Endpoint for the Google Apps Script Web App
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZl26R3cUMKftbVUKl46gspEWjZGI4nMnRlxBXmyNoBTMlpVQGrwhmS5IxGdPNc1Y_Rg/exec';
+
+        const form = document.getElementById('notifyForm');
+        const successMessage = document.getElementById('successMessage');
+        const emailInput = document.getElementById('email');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnContent = submitBtn.innerHTML;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            if (emailInput.value) {
+                // Change button state to loading
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(form);
+
+                // Send data to Google Apps Script
+                fetch(SCRIPT_URL, { 
+                    method: 'POST', 
+                    body: formData,
+                    mode: 'no-cors' // Bypasses CORS restrictions for Google Scripts
+                })
+                .then(response => {
+                    // Animate form out
+                    form.style.opacity = '0';
+                    form.style.transform = 'translateY(-10px)';
+                    form.style.transition = 'all 0.4s ease';
+                    
+                    setTimeout(() => {
+                        form.classList.add('hidden');
+                        
+                        // Animate success message in
+                        successMessage.classList.remove('hidden');
+                        successMessage.style.opacity = '0';
+                        successMessage.style.transform = 'translateY(10px)';
+                        
+                        // Trigger reflow
+                        void successMessage.offsetWidth;
+                        
+                        successMessage.style.transition = 'all 0.4s ease';
+                        successMessage.style.opacity = '1';
+                        successMessage.style.transform = 'translateY(0)';
+                    }, 400);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.innerHTML = originalBtnContent;
+                    submitBtn.disabled = false;
+                    alert('There was an issue submitting your email. Please try again or email us directly.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
